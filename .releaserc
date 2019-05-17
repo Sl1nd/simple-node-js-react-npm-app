@@ -10,6 +10,5 @@
         {"path": "dist/test.txt", "label": "test distribution"}
       ]
     }],
-  ],
-  "debug": true
+  ]
 }

@@ -10,6 +10,8 @@ pipeline {
             steps {
                 sh 'git branch'
                 sh 'echo $GH_TOKEN'
+                sh 'echo $BRANCH_NAME'
+                sh 'echo $GIT_BRANCH',
                 sh 'npm --version'
                 sh 'npm install -g npx'
                 sh 'npm install'
@@ -23,7 +25,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'npx semantic-release'
+                sh 'npx semantic-release --debug'
             }
         }
     }
