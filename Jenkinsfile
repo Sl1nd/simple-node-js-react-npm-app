@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo $PATH'
+                sh 'echo $GH_TOKEN'
+                sh 'echo $GITHUB_URL'
                 sh 'npm --version'
                 sh 'npm install -g npx'
                 sh 'npm install'
