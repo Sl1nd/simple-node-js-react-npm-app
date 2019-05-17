@@ -1,10 +1,9 @@
 pipeline {
     agent any
+    tools {nodejs "NodeJS8"}
     environment {
         CI = 'true'
         GH_TOKEN = credentials('github-token')
-        NODEJS_HOME = "${tool NodeJS8}"
-        PATH="${env.NODEJS_HOME}:${env.PATH}"
     }
     stages {
         stage('Build') {
