@@ -1,16 +1,19 @@
 pipeline {
-    agent any
-    environment {
-        CI = 'true'
-        GH_TOKEN = credentials('github-token')
-    }
-    stages {
+    node {
+        env.CI = 'true'
+        env.GH_TOKEN = credentials('github-token')
+        env.NODEJS_HOME = "${tool 'Node 8.x'}"
+        // on linux / mac
+        env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+
+
+         stage('Build') {
+            sh 'npm --version'
+
+         }
+
         stage('Build') {
             steps {
-                 nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
-                    sh 'npm config ls'
-                }
-                sh 'npm --version'
                 sh 'npm install -g npx'
                 sh 'npm install'
                 sh 'git --version'
