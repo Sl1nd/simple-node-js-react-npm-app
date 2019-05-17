@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    }
     environment {
         CI = 'true'
         GH_TOKEN = credentials('github-token')
