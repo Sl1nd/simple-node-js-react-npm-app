@@ -1,7 +1,7 @@
     node {
         env.CI = 'true'
         env.GH_TOKEN = credentials('github-token')
-        env.NODEJS_HOME = "${tool 'Node 8.x'}"
+        env.NODEJS_HOME = tool "NodeJS8"
         // on linux / mac
         env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
 
