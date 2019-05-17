@@ -3,6 +3,8 @@ pipeline {
     environment {
         CI = 'true'
         GH_TOKEN = credentials('github-token')
+        def nodeJSHome = tool 'NodeJS8'
+        env.PATH = "${nodeJSHome}/bin:/${env.P<ath}:/tmp/npm-roaming/npm"
     }
     stages {
         stage('Build') {
