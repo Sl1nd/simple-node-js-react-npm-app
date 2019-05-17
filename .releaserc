@@ -1,8 +1,9 @@
 {
+  "repositoryUrl": "https://github.com/Sl1nd/simple-node-js-react-npm-app/",
   "plugins": [
     ["@semantic-release/npm", {
       "npmPublish": false,
-      "tarballDir": "dist"
+      "tarballDir": "src"
     }],
     ["@semantic-release/github", {
       "assets": [

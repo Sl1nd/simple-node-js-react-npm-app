@@ -4,13 +4,12 @@ pipeline {
     environment {
         CI = 'true'
         GH_TOKEN = credentials('github-token')
-        GH_URL = 'https://github.com/Sl1nd/simple-node-js-react-npm-app'
     }
     stages {
         stage('Build') {
             steps {
+                sh 'git checkout master'
                 sh 'echo $GH_TOKEN'
-                sh 'echo $GH_URL'
                 sh 'npm --version'
                 sh 'npm install -g npx'
                 sh 'npm install'
