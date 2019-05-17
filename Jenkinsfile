@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'echo $PATH'
                 sh 'npm --version'
                 sh 'npm install -g npx'
                 sh 'npm install'
