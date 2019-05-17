@@ -14,6 +14,7 @@ pipeline {
             steps {
                 sh 'npm install -g npx'
                 sh 'npm install'
+                sh 'git --version'
             }
         }
         stage('Test') {
