@@ -1,18 +1,14 @@
-    node {
-        env.CI = 'true'
-        env.GH_TOKEN = credentials('github-token')
-        env.NODEJS_HOME = tool "NodeJS8"
-        // on linux / mac
-        env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-
-
-         stage('Build') {
-            sh 'npm --version'
-
-         }
-
+pipeline {
+    agent any
+    tools {nodejs "NodeJS8"}
+    environment {
+        CI = 'true'
+        GH_TOKEN = credentials('github-token')
+    }
+    stages {
         stage('Build') {
             steps {
+                sh 'npm --version'
                 sh 'npm install -g npx'
                 sh 'npm install'
                 sh 'git --version'
@@ -29,3 +25,4 @@
             }
         }
     }
+}
