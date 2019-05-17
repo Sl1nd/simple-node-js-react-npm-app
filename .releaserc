@@ -1,6 +1,6 @@
 {
   "branch": "master",
-  "dryRun": true
+  "dryRun": true,
   "plugins": [
     ["@semantic-release/npm", {
       "npmPublish": false,
