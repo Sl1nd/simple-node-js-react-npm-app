@@ -1,4 +1,3 @@
-pipeline {
     node {
         env.CI = 'true'
         env.GH_TOKEN = credentials('github-token')
@@ -30,4 +29,3 @@ pipeline {
             }
         }
     }
-}
