@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'git checkout master'
+                sh 'git branch'
                 sh 'echo $GH_TOKEN'
                 sh 'npm --version'
                 sh 'npm install -g npx'
