@@ -4,6 +4,7 @@ pipeline {
     environment {
         GH_TOKEN = credentials('github-token')
         CI = 'true'
+        GIT_BRANCH = 'master'
     }
     stages {
         stage('Build') {
