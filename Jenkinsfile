@@ -2,8 +2,8 @@ pipeline {
     agent any
     tools {nodejs "NodeJS8"}
     environment {
-        CI = 'true'
         GH_TOKEN = credentials('github-token')
+        CI = 'true'
     }
     stages {
         stage('Build') {
