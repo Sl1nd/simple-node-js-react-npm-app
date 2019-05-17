@@ -3,12 +3,13 @@ pipeline {
     environment {
         CI = 'true'
         GH_TOKEN = credentials('github-token')
-        NODEJS_HOME = tool "NodeJS8"
-        PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
     }
     stages {
         stage('Build') {
             steps {
+                 nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+                    sh 'npm config ls'
+                }
                 sh 'npm --version'
                 sh 'npm install -g npx'
                 sh 'npm install'
