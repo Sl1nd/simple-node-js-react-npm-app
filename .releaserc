@@ -1,5 +1,4 @@
 {
-  "branch": "origin/master",
   "dryRun": true,
   "plugins": [
     ["@semantic-release/npm", {
