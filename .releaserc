@@ -2,7 +2,7 @@
   "plugins": [
     ["@semantic-release/npm", {
       "npmPublish": false,
-      "tarballDir": "dist",
+      "tarballDir": "dist"
     }],
     ["@semantic-release/github", {
       "assets": [
