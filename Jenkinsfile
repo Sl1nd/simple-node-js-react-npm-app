@@ -2,9 +2,9 @@ pipeline {
     agent any
     tools {nodejs "NodeJS8"}
     environment {
+        CI = 'true'
         GH_TOKEN = credentials('github-token')
         GH_URL = 'https://github.com/Sl1nd/simple-node-js-react-npm-app'
-        CI = 'true'
     }
     stages {
         stage('Build') {
