@@ -12,6 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'npm install -g npx'
                 sh 'npm install'
             }
         }
