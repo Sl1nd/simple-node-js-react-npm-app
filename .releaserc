@@ -5,6 +5,11 @@
     ["@semantic-release/npm", {
       "npmPublish": false,
       "tarballDir": "dist",
-    }]
+    }],
+    ["@semantic-release/github", {
+      "assets": [
+        {"path": "dist/test.txt", "label": "test distribution"}
+      ]
+    }],
   ]
 }
