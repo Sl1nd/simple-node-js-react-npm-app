@@ -5,11 +5,11 @@
       "npmPublish": false,
       "tarballDir": "src"
     }],
-    "@semantic-release/git",
     ["@semantic-release/github", {
       "assets": [
         {"path": "dist/test.txt", "label": "test distribution"}
       ]
-    }]
+    }],
+    "@semantic-release/git"
   ]
 }
