@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'npx semantic-release --debug'
+                sh 'npx semantic-release --debug -d'
             }
         }
     }

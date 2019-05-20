@@ -9,6 +9,6 @@
       "assets": [
         {"path": "dist/test.txt", "label": "test distribution"}
       ]
-    }],
+    }]
   ]
 }
