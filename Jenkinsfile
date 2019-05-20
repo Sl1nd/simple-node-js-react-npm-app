@@ -10,8 +10,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'git branch'
-                sh 'echo $GH_TOKEN'
                 sh 'echo $BRANCH_NAME'
+                sh 'echo $GH_TOKEN'
+
                 sh 'echo $GIT_BRANCH'
                 sh 'npm --version'
                 sh 'npm install -g npx'
